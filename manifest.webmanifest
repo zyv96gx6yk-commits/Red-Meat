@@ -1,0 +1,14 @@
+{
+  "name": "Red Meat Bograshov",
+  "short_name": "Red Meat",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#c8102e",
+  "lang": "he",
+  "dir": "rtl",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

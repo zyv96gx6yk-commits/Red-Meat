@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://redmeat-bograshov.co.il/</loc>
+    <xhtml:link rel="alternate" hreflang="he-IL" href="https://redmeat-bograshov.co.il/?lang=he" />
+    <xhtml:link rel="alternate" hreflang="en"    href="https://redmeat-bograshov.co.il/?lang=en" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://redmeat-bograshov.co.il/legal/accessibility.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://redmeat-bograshov.co.il/legal/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://redmeat-bograshov.co.il/legal/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+</urlset>
