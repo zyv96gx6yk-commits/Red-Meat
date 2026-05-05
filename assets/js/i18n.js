@@ -17,7 +17,6 @@
       'nav.menu': 'תפריט',
       'nav.lunch': 'ארוחות עסקיות',
       'nav.delivery': 'משלוחים',
-      'nav.reservations': 'הזמנת מקום',
       'nav.visit': 'ביקור',
       'nav.reviews': 'ביקורות',
       'nav.contact': 'צור קשר',
@@ -34,8 +33,7 @@
       'hero.chip4': 'פתוח עד מאוחר',
 
       'quick.delivery': 'משלוח',
-      'quick.business': 'תשלום עסקי',
-      'quick.book': 'הזמנת מקום',
+      'quick.business': 'תן ביס · עסקי',
       'quick.navigate': 'ניווט',
 
       'menu.eyebrow': 'התפריט שלנו',
@@ -109,7 +107,7 @@
 
       'lunch.eyebrow': 'ארוחות עסקיות',
       'lunch.title': 'ארוחת צוהריים, תל אביב סטייל',
-      'lunch.lead': "צלחת או כריך / רוליטו לבחירה, תוספת לבחירה ופחית שתייה — 65 ₪. בתוקף בימים א'–ה' עד 16:00. משלמים נוח עם 10bis, Cibus ו־Mishloha.",
+      'lunch.lead': "צלחת או כריך / רוליטו לבחירה, תוספת לבחירה ופחית שתייה — 65 ₪. בתוקף בימים א'–ה' עד 16:00. משלמים נוח עם 10bis ו־Mishloha.",
       'lunch.b1': 'כריך / רוליטו / סלט לבחירה',
       'lunch.b2': "תוספת אחת: צ'יפס · בטטה · טבעות בצל",
       'lunch.b3': 'פחית שתייה',
@@ -125,10 +123,6 @@
       'delivery.cta': 'הזמינו עכשיו ←',
       'delivery.callus': 'חייגו ישירות',
       'delivery.callcta': 'להזמנה ←',
-
-      'res.eyebrow': 'הזמנת מקום',
-      'res.title': 'לשמור שולחן בבוגרשוב',
-      'res.lead': 'ניהול הזמנות מבוצע דרך Tabit / Ontopo. בקבוצות גדולות (8+) — חייגו אלינו ישירות לתיאום.',
 
       'visit.eyebrow': 'ביקור',
       'visit.title': 'בוגרשוב 9, תל אביב־יפו',
@@ -168,7 +162,7 @@
       'contact.err': 'נא למלא את כל השדות.',
 
       'thumb.order': 'משלוח',
-      'thumb.book': 'שולחן',
+      'thumb.menu': 'תפריט',
 
       'footer.tag': 'כריך דרום אמריקאי, תל אביב.',
       'footer.address': 'בוגרשוב 9, תל אביב־יפו',
@@ -216,7 +210,6 @@
       'nav.menu': 'Menu',
       'nav.lunch': 'Business Lunch',
       'nav.delivery': 'Delivery',
-      'nav.reservations': 'Reservations',
       'nav.visit': 'Visit',
       'nav.reviews': 'Reviews',
       'nav.contact': 'Contact',
@@ -233,8 +226,7 @@
       'hero.chip4': 'Open late',
 
       'quick.delivery': 'Delivery',
-      'quick.business': 'Corporate pay',
-      'quick.book': 'Book a table',
+      'quick.business': '10bis · Corporate',
       'quick.navigate': 'Navigate',
 
       'menu.eyebrow': 'Our Menu',
@@ -308,7 +300,7 @@
 
       'lunch.eyebrow': 'Business Lunch',
       'lunch.title': 'Lunch, Tel-Aviv style',
-      'lunch.lead': 'Salad plate, sandwich or roll, one side and a soft drink — ₪65. Sun–Thu till 16:00. Pay easily with 10bis, Cibus or Mishloha.',
+      'lunch.lead': 'Salad plate, sandwich or roll, one side and a soft drink — ₪65. Sun–Thu till 16:00. Pay easily with 10bis or Mishloha.',
       'lunch.b1': 'Sandwich / roll / salad of choice',
       'lunch.b2': 'One side: fries, sweet-potato or onion rings',
       'lunch.b3': 'Soft drink (can)',
@@ -324,10 +316,6 @@
       'delivery.cta': 'Order now →',
       'delivery.callus': 'Call us directly',
       'delivery.callcta': 'Order →',
-
-      'res.eyebrow': 'Reservations',
-      'res.title': 'Save a table on Bograshov',
-      'res.lead': 'Bookings managed via Tabit / Ontopo. For groups of 8+ please call us directly.',
 
       'visit.eyebrow': 'Visit',
       'visit.title': '9 Bograshov St, Tel Aviv-Yafo',
@@ -367,7 +355,7 @@
       'contact.err': 'Please complete all fields.',
 
       'thumb.order': 'Delivery',
-      'thumb.book': 'Table',
+      'thumb.menu': 'Menu',
 
       'footer.tag': 'South American Sandwich, Tel Aviv.',
       'footer.address': '9 Bograshov St, Tel Aviv-Yafo',

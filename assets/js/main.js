@@ -9,6 +9,30 @@
 (function () {
   'use strict';
 
+  /* =========================================================
+     ⬇⬇⬇ EDIT THESE URLS WHEN YOU GET YOUR REAL RESTAURANT PAGES ⬇⬇⬇
+     Every <a data-link="..."> on the site reads from this map,
+     so you only update them in ONE place.
+     ========================================================= */
+  const LINKS = {
+    wolt:     'https://wolt.com/en/isr/tel-aviv',           // <-- replace with your Wolt page
+    tenbis:   'https://www.10bis.co.il/',                   // <-- replace with your 10bis page
+    mishloha: 'https://www.mishloha.co.il/',                // <-- replace with your Mishloha page
+    waze:     'https://waze.com/ul?q=Bograshov%209%20Tel%20Aviv',
+    gmaps:    'https://maps.app.goo.gl/ZKso4oRaaqG4Py2k8?g_st=ic'
+  };
+  document.querySelectorAll('a[data-link]').forEach(a => {
+    const k = a.getAttribute('data-link');
+    if (LINKS[k]) a.setAttribute('href', LINKS[k]);
+  });
+
+  /* Hide menu-item images that haven't been provided yet
+     (image is optional per item; if no <img> child exists, nothing happens). */
+  document.querySelectorAll('.menu-item__img').forEach(img => {
+    if (!img.getAttribute('src')) img.parentElement && img.parentElement.classList.remove('menu-item--with-image');
+    img.addEventListener('error', () => { img.style.display = 'none'; });
+  });
+
   const I18N = window.RM_I18N || { he: {}, en: {} };
 
   /* -------- HOURS (declared early; used by applyLang) -------- */
