@@ -15,11 +15,12 @@
      so you only update them in ONE place.
      ========================================================= */
   const LINKS = {
-    wolt:     'https://wolt.com/en/isr/tel-aviv',           // <-- replace with your Wolt page
-    tenbis:   'https://www.10bis.co.il/',                   // <-- replace with your 10bis page
-    mishloha: 'https://www.mishloha.co.il/',                // <-- replace with your Mishloha page
-    waze:     'https://waze.com/ul?q=Bograshov%209%20Tel%20Aviv',
-    gmaps:    'https://maps.app.goo.gl/ZKso4oRaaqG4Py2k8?g_st=ic'
+    wolt:     'https://wolt.com/en/isr/tel-aviv/restaurant/red-meat-bugrashov',           // <-- replace with your Wolt page
+    tenbis:   'https://www.10bis.co.il/next/en/restaurants/menu/delivery/22083/red-meat',                   // <-- replace with your 10bis page
+    mishloha: 'https://www.mishloha.co.il/uncampaign/r/רד%20מיט%20בוגרשוב#!/rest/614989/menu',                // <-- replace with your Mishloha page
+    waze:     'https://www.waze.com/he/live-map/directions/il/tel-aviv-district/tel-aviv-yafo/red-meat?to=place.ChIJpxdV1X1MHRURqf6jYQu5y9w',
+    gmaps:    'https://www.google.com/maps/dir//Red+Meat,+Bograshov+St+9,+Tel+Aviv-Yafo/@32.0867765,34.76303,15z/data=!4m17!1m8!3m7!1s0x151d4c7dd55517a7:0xdccbb90b61a3fea9!2sRed+Meat!8m2!3d32.0775315!4d34.7687694!15sCghyZWQgbWVhdFoKIghyZWQgbWVhdJIBFGZhc3RfZm9vZF9yZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJ3Y1Y5NlJGSjNFQUXgAQD6AQQIABAf!16s%2Fg%2F11c5xlvvgt!4m7!1m0!1m5!1m1!1s0x151d4c7dd55517a7:0xdccbb90b61a3fea9!2m2!1d34.7687694!2d32.0775315?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D
+       '
   };
   document.querySelectorAll('a[data-link]').forEach(a => {
     const k = a.getAttribute('data-link');
