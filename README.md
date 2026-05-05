@@ -100,3 +100,4 @@ Chrome / Safari / Edge / Firefox — last 2 versions; iOS Safari ≥ 14; Samsung
 ## License
 
 © Red Meat Bograshov. All rights reserved.
+
