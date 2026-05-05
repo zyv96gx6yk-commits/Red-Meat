@@ -9,11 +9,10 @@ Built as plain HTML / CSS / vanilla JS — no build step, no framework, no track
 - **Bilingual & RTL/LTR** — switch between Hebrew (default) and English with one click; persists per visitor. URL `?lang=en` is honored.
 - **Accessibility (IS 5568 / WCAG 2.1 AA)** — full keyboard nav, ARIA roles, focus rings, skip link, dedicated accessibility menu (high-contrast / invert / grayscale / bigger or smaller text / readable font / letter spacing / link emphasis / motion stop / big cursor) with `localStorage` persistence. Dedicated `legal/accessibility.html` statement.
 - **Israeli ecosystem integrations**
-  - Reservations: **Tabit**, **Ontopo**
-  - Delivery: **Wolt**, **10bis**, **Mishloha**, **Cibus**
+  - Delivery: **Wolt**, **10bis**, **Mishloha**
   - Maps: Google Maps embed + **Waze** & **Google Maps** deeplinks
 - **Interactive on-page menu** — tabbed (sandwiches / rolls / salads / sides / drinks / dessert) with full Hebrew + English copy, prices in ₪.
-- **Conversion-optimized** — sticky thumb-bar at the bottom on mobile (Order Delivery / Book Table / Call), big tap targets (≥44 px).
+- **Conversion-optimized** — sticky thumb-bar at the bottom on mobile (Order Delivery / Menu / Call), big tap targets (≥44 px).
 - **SEO** — Schema.org `Restaurant` JSON-LD, OpenGraph, hreflang, sitemap.xml, robots.txt.
 - **PWA** — installable web manifest.
 - **Live "Open now / Closed" indicator** in the top bar based on the schedule.
@@ -78,9 +77,43 @@ npx vercel --prod
 3. Update the canonical URL in `index.html` (`<link rel="canonical">`) and `sitemap.xml` if you change domains.
 4. Replace the placeholder Instagram/Facebook URLs in the footer.
 5. Drop a real high-resolution OG cover at `assets/img/og-cover.jpg` (1200×630).
-6. Add the real Tabit / Wolt restaurant URLs once published (search “Red Meat Bograshov” in each platform).
+6. Add the real Wolt / 10bis / Mishloha restaurant URLs once published (search “Red Meat Bograshov” in each platform). See *Editing content → Delivery & map links* below.
 
 ## Editing content
+
+### 🔗 Delivery & map links — edit ONE place
+
+All Wolt / 10bis / Mishloha / Waze / Google-Maps URLs live in the `LINKS`
+object at the top of **`assets/js/main.js`**. Open it and change the values:
+
+```js
+const LINKS = {
+  wolt:     'https://wolt.com/...your-restaurant-page',
+  tenbis:   'https://www.10bis.co.il/.../red-meat-bograshov',
+  mishloha: 'https://www.mishloha.co.il/...',
+  waze:     'https://waze.com/ul?q=Bograshov%209%20Tel%20Aviv',
+  gmaps:    'https://maps.app.goo.gl/ZKso4oRaaqG4Py2k8?g_st=ic'
+};
+```
+
+Every `<a data-link="wolt">`, `<a data-link="tenbis">`, etc. on the page reads
+its `href` from this map at load time, so you don't need to hunt through HTML.
+
+### 📸 Adding photos to menu items
+
+1. Save your photo into `assets/img/menu/` (recommended size 600×450 JPG, < 100 KB).
+2. Open `index.html`, find the menu `<li class="menu-item">` you want to add a photo to (e.g. "קריזי רד · אנטריקוט").
+3. Paste this line **as the first child** of the `<li>`:
+
+   ```html
+   <img class="menu-item__img" src="assets/img/menu/crazy-red.jpg"
+        alt="Crazy Red entrecote sandwich" loading="lazy">
+   ```
+
+That's it. The card auto-flips to a side-by-side layout when the image
+is present. Items without an image stay text-only — no broken layout.
+
+### Other content
 
 - **Menu, prices, descriptions:** edit in `index.html` (DOM is the source of truth) and the matching translations in `assets/js/i18n.js` (key → text).
 - **Hours:** edit the table in `index.html` and the `HOURS` array in `assets/js/main.js`.

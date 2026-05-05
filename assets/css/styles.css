@@ -258,7 +258,7 @@ button { font: inherit; cursor: pointer; }
 .quick { background: var(--c-paper-2); border-block: 1px solid var(--c-line); }
 .quick__grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(0,1fr));
   gap: 0;
 }
 .quick__item {
@@ -273,14 +273,11 @@ button { font: inherit; cursor: pointer; }
 .quick__item:hover, .quick__item:focus-visible { background: #fff; }
 .quick__name { font-weight: 800; font-size: 15px; }
 .quick__sub { color: var(--c-muted); font-size: 12px; margin-top: 4px; }
-.quick__item--accent { background: var(--c-red); color: #fff; }
-.quick__item--accent .quick__sub { color: rgba(255,255,255,.85); }
-.quick__item--accent:hover { background: var(--c-red-deep); }
 
-@media (max-width: 720px) {
-  .quick__grid { grid-template-columns: repeat(3, 1fr); }
-  .quick__item:nth-child(3n) { border-inline-end: 0; }
-  .quick__item:nth-child(-n+3) { border-bottom: 1px solid var(--c-line); }
+@media (max-width: 540px) {
+  .quick__grid { grid-template-columns: repeat(2, 1fr); }
+  .quick__item:nth-child(2n) { border-inline-end: 0; }
+  .quick__item:nth-child(-n+2) { border-bottom: 1px solid var(--c-line); }
 }
 
 /* ============== SECTIONS ============== */
@@ -380,6 +377,34 @@ button { font: inherit; cursor: pointer; }
 .menu-item--hero {
   border-color: var(--c-red);
   background: linear-gradient(180deg, #fff 0%, #fff5f6 100%);
+}
+
+/* Optional photo. Drop an <img class="menu-item__img"> as the FIRST child
+   of any .menu-item to enable. The card auto-switches to a 2-column layout. */
+.menu-item__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--c-paper-2);
+  margin-bottom: 12px;
+}
+.menu-item:has(> .menu-item__img) {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.menu-item:has(> .menu-item__img) .menu-item__img {
+  margin-bottom: 0;
+}
+.menu-item:has(> .menu-item__img) > :not(.menu-item__img) {
+  grid-column: 2;
+}
+@media (max-width: 540px) {
+  .menu-item:has(> .menu-item__img) {
+    grid-template-columns: 96px 1fr;
+  }
 }
 .menu-item__badge {
   display: inline-block;
